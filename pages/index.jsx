@@ -13,7 +13,7 @@ export default function Timeline({ data }) {
   return (
     <div className="lg:mt-[10%] md:mt-[13%] sm:mt-[15%] mb-[5%]">
       {isloading ? (
-        <section className="flex justify-center items-center bg-red-200 h-[85vh]">
+        <section className="flex justify-center items-center h-[85vh]">
           <Spinner />
         </section>
       ) : (

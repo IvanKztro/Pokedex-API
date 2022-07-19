@@ -11,7 +11,6 @@ export default function Pokemon({ poke }) {
         onClick={() => {
           pokeSelected();
         }}
-        onFocus={pokeSelected}
         onMouseEnter={() => {
           setSelected(true);
         }}
@@ -24,14 +23,19 @@ export default function Pokemon({ poke }) {
             {poke.name}
           </h4>
           <ul className="flex gap-2 mt-3">
-            {poke.types.map((data, index) => (
+            <span
+              className={`${poke.types[0].type.name} py-[1px] px-2 rounded text-white`}
+            >
+              {poke.types[0].type.name}
+            </span>
+            {/* {poke.types.map((data, index) => (
               <span
                 className={`${data.type.name} py-[1px] px-2 rounded text-white`}
                 key={`type-${index}`}
               >
                 {data.type.name}
               </span>
-            ))}
+            ))} */}
           </ul>{" "}
         </div>
         <div className="">
