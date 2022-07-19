@@ -1,9 +1,14 @@
 import { useState } from "react";
+import Image from "next/image";
+
+var photoID = 10813131;
 export default function Pokemon({ poke }) {
   const [isselected, setSelected] = useState(false);
   const pokeSelected = () => {
     setSelected(true);
   };
+
+  console.log(poke.Image);
   return (
     <>
       <div
@@ -23,31 +28,48 @@ export default function Pokemon({ poke }) {
             {poke.name}
           </h4>
           <ul className="flex gap-2 mt-3">
-            <span
+            {/* <span
               className={`${poke.types[0].type.name} py-[1px] px-2 rounded text-white`}
             >
               {poke.types[0].type.name}
-            </span>
-            {/* {poke.types.map((data, index) => (
+            </span> */}
+            {poke.types.map((data, index) => (
               <span
                 className={`${data.type.name} py-[1px] px-2 rounded text-white`}
                 key={`type-${index}`}
               >
                 {data.type.name}
               </span>
-            ))} */}
+            ))}
           </ul>{" "}
         </div>
         <div className="">
-          <img
-            src={poke.imagen}
+          <picture>
+            <source srcSet={poke.imagen} type="image/webp" />
+            <img
+              src={poke.imagen}
+              alt={poke.imagen}
+              width={20}
+              height={20}
+              className={
+                isselected
+                  ? "lg:w-25 md:w-[8rem] -mt-8 animate-bounce"
+                  : "lg:w-25 md:w-[8rem] -mt-8 "
+              }
+            />
+          </picture>
+          {/* <Image
+            src={photoID}
+            loader={poke.imagen}
             alt={poke.imagen}
+            width={20}
+            height={20}
             className={
               isselected
                 ? "lg:w-25 md:w-[8rem] -mt-8 animate-bounce"
                 : "lg:w-25 md:w-[8rem] -mt-8 "
             }
-          />
+          /> */}
         </div>
         {/* <div className="bg-red-200"> */}
         {/* </div> */}

@@ -61,11 +61,22 @@ export default function ButtonsNav({
               getPrevious();
             }}
           >
-            <img
+            <picture>
+              <source
+                srcSet="./right.png"
+                type="image/webp"
+              />
+              <img
+                src="./right.png"
+                alt="Landscape picture"
+                className="h-4 w-3 rotate-180 invert"
+              />
+            </picture>
+            {/* <img
               src="./right.png"
               alt=""
               className="h-4 w-3 rotate-180 invert"
-            />
+            /> */}
           </button>
           <button
             className="bg-red-500 text-white hover:bg-red-600  p-2 rounded-lg "
@@ -73,7 +84,15 @@ export default function ButtonsNav({
               getNext();
             }}
           >
-            <img src="./right.png" alt="" className="h-4 w-3 invert " />
+            <picture>
+              <source srcSet="./right.png" type="image/webp" />
+              <img
+                src="./right.png"
+                alt="Landscape picture"
+                className="h-4 w-3  invert"
+              />
+            </picture>
+            {/* <img src="./right.png" alt="" className="h-4 w-3 invert " /> */}
           </button>
         </div>
       </section>
