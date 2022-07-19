@@ -1,4 +1,85 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ .normal{ background: #A8A77A}
+ .fire{ background: #EE8130}
+ .water{ background: #6390F0}
+ .electric{ background: #F7D02C}
+ .grass{ background: #7AC74C}
+ .ice{ background: #96D9D6}
+ .fighting{ background: #C22E28}
+ .poison{ background: #A33EA1}
+ .ground{ background: #E2BF65}
+ .flying{ background: #A98FF3}
+ .psychic{ background: #F95587}
+ .bug{ background: #A6B91A}
+ .rock{ background: #B6A136}
+ .ghost{ background: #735797}
+ .dragon{ background: #6F35FC}
+ .dark{ background: #705746}
+ .steel{ background: #B7B7CE}
+ .fairy{ background: #D685AD}
+
+/*Spinner Pokeball*/
+/* html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+ .pokemon {
+   position: relative;
+   height: 110px;
+   width: 110px;
+   background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50%);
+   border-radius: 50%;
+   border: 8px solid black;
+   animation: spin 1s linear infinite;
+ }
+
+ .pokemon::before {
+   content: '';
+   position: absolute;
+   height: 8px;
+   width: 100px;
+   background: black;
+   top: 50px;
+   transform: translatey(-50%);
+ }
+
+ .pokemon::after {
+   content: '';
+   position: absolute;
+   height: 38px;
+   width: 38px;
+   border-radius: 50%;
+   background: white;
+   top: 50px;
+   left: 50px;
+   transform: translate(-50%, -50%);
+   box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+
+ }
+
+ /* Spin Animation */
+ @keyframes spin {
+   from {
+     transform: rotate(0deg);
+   }
+
+   to {
+     transform: rotate(360deg);
+   }
+ }
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -13,4 +94,45 @@ a {
 
 * {
   box-sizing: border-box;
+} */
+
+/* .navbar{
+  display:flex;
+  gap: .5rem;
+  background-color: rgb(117, 117, 117);
+  color:aliceblue;
+  font-size: .8rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding: .5rem 1rem;
+
 }
+
+.sidebar {
+  grid-area: sidebar;
+  background: #465d6d;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  height: auto;
+  width: 100%;
+}
+
+.navbarselected{
+  color: aqua;
+}
+
+.main {
+  grid-area: main;
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  background-color: #ffffff;
+
+  height: 100vh;
+  overflow: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: grid;
+  grid-template: [header-top] 'sidebar header header' [header-bottom] [main-top] 'sidebar main  main' 1fr [main-bottom] / auto 1fr auto;
+} */
