@@ -17,7 +17,7 @@ export default function Timeline({ data }) {
           <Spinner />
         </section>
       ) : (
-        <section className="flex justify-center">
+        <section className="flex justify-center mt-[20%] sm:mt-[10%] md:mt-[10%] lg:mt-[5%] ">
           <ul className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 md:w-[70%] sm:w-[50%] ">
             {pokes.map((poke, index) => (
               <Pokemon key={index} poke={poke} />

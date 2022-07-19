@@ -49,12 +49,10 @@ export default function Pokemon({ poke }) {
             <img
               src={poke.imagen}
               alt={poke.imagen}
-              width={20}
-              height={20}
               className={
                 isselected
-                  ? "lg:w-25 md:w-[8rem] -mt-8 animate-bounce"
-                  : "lg:w-25 md:w-[8rem] -mt-8 "
+                  ? "lg:w-25 md:w-[8rem] -mt-8 sm:w-[15rem] ml-[15%] animate-bounce"
+                  : "lg:w-25 md:w-[8rem] -mt-8 sm:w-[15rem] ml-[15%] "
               }
             />
           </picture>
