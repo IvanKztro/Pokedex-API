@@ -1,23 +1,26 @@
 // import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Pokemon from "../components/pokemon";
 import ButtonsNav from "../components/buttons-nav";
 import Spinner from "../components/spinner";
+import InputSearch from "../components/inputseach";
 export default function Timeline({ data }) {
-  const { pokemons, previous, nextp } = data;
+  const { pokemons, previous, nextp, allpokes } = data;
   const [pokes, setPokes] = useState(pokemons);
+  const [allpokemons, setallPokemons] = useState(allpokes);
   const [pre, setPreviuos] = useState(previous);
   const [next, setNext] = useState(nextp);
   const [isloading, setIsloading] = useState(false);
 
   return (
-    <div className="lg:mt-[10%] md:mt-[13%] sm:mt-[15%] mb-[5%]">
+    <div className="mt-[1%]">
+      <InputSearch allpokemons={allpokemons} />
       {isloading ? (
         <section className="flex justify-center items-center h-[85vh]">
           <Spinner />
         </section>
       ) : (
-        <section className="flex justify-center mt-[20%] sm:mt-[10%] md:mt-[10%] lg:mt-[5%] ">
+        <section className="flex justify-center  mt-8">
           <ul className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 md:w-[70%] sm:w-[50%] ">
             {pokes.map((poke, index) => (
               <Pokemon key={index} poke={poke} />
@@ -67,12 +70,28 @@ export async function getStaticProps() {
     };
   });
 
+  const urlall = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=800";
+  const resall = await fetch(urlall);
+  const jsonall = await resall.json();
+  const { results } = jsonall;
+  const pokemonsall = results.map((data, index) => {
+    return {
+      id: index + 1,
+      name: data.name,
+      url: data.url,
+      imagen: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+        index + 1
+      }.png`,
+    };
+  });
+
   return {
     props: {
       data: {
         pokemons,
         previous,
         nextp: next,
+        allpokes: pokemonsall,
       },
     },
   };

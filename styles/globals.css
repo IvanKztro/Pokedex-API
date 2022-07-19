@@ -2,27 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
- .normal{ background: #A8A77A}
- .fire{ background: #EE8130}
- .water{ background: #6390F0}
- .electric{ background: #F7D02C}
- .grass{ background: #7AC74C}
- .ice{ background: #96D9D6}
- .fighting{ background: #C22E28}
- .poison{ background: #A33EA1}
- .ground{ background: #E2BF65}
- .flying{ background: #A98FF3}
- .psychic{ background: #F95587}
- .bug{ background: #A6B91A}
- .rock{ background: #B6A136}
- .ghost{ background: #735797}
- .dragon{ background: #6F35FC}
- .dark{ background: #705746}
- .steel{ background: #B7B7CE}
- .fairy{ background: #D685AD}
+ .normal{ background: #A8A77A; }
+ .fire{ background: #EE8130; }
+ .water{ background: #6390F0; }
+ .electric{ background: #F7D02C; }
+ .grass{ background: #7AC74C; }
+ .ice{ background: #96D9D6; }
+ .fighting{ background: #C22E28; }
+ .poison{ background: #A33EA1; }
+ .ground{ background: #E2BF65; }
+ .flying{ background: #A98FF3; }
+ .psychic{ background: #F95587; }
+ .bug{ background: #A6B91A; }
+ .rock{ background: #B6A136; }
+ .ghost{ background: #735797; }
+ .dragon{ background: #6F35FC; }
+ .dark{ background: #705746; }
+ .steel{ background: #B7B7CE; }
+ .fairy{ background: #D685AD; }
+
+  .normal-border{ border-color: #A8A77A; }
+ .fire-border{ border-color: #EE8130; }
+ .water-border{ border-color: #6390F0; }
+ .electric-border{ border-color: #F7D02C; }
+ .grass-border{ border-color: #7AC74C; }
+ .ice-border{ border-color: #96D9D6; }
+ .fighting-border{ border-color: #C22E28; }
+ .poison-border{ border-color: #A33EA1; }
+ .ground-border{ border-color: #E2BF65; }
+ .flying-border{ border-color: #A98FF3; }
+ .psychic-border{ border-color: #F95587; }
+ .bug-border{ border-color: #A6B91A; }
+ .rock-border{ border-color: #B6A136; }
+ .ghost-border{ border-color: #735797; }
+ .dragon-border{ border-color: #6F35FC; }
+ .dark-border{ border-color: #705746; }
+ .steel-border{ border-color: #B7B7CE; }
+ .fairy-border{ border-color: #D685AD; }
+
+ .normal-text{ color: #A8A77A; }
+ .fire-text{ color: #EE8130; }
+ .water-text{ color: #6390F0; }
+ .electric-text{ color: #F7D02C; }
+ .grass-text{ color: #7AC74C; }
+ .ice-text{ color: #96D9D6; }
+ .fighting-text{ color: #C22E28; }
+ .poison-text{ color: #A33EA1; }
+ .ground-text{ color: #E2BF65; }
+ .flying-text{ color: #A98FF3; }
+ .psychic-text{ color: #F95587; }
+ .bug-text{ color: #A6B91A; }
+ .rock-text{ color: #B6A136; }
+ .ghost-text{ color: #735797; }
+ .dragon-text{ color: #6F35FC; }
+ .dark-text{ color: #705746; }
+ .steel-text{ color: #B7B7CE; }
+ .fairy-text{ color: #D685AD; }
+
+ .input-results{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    top: 9rem;
+ }
 
 /*Spinner Pokeball*/
-
 
  .pokemon {
    position: relative;
@@ -43,7 +85,7 @@
    top: 50px;
    transform: translatey(-50%);
  }
- 
+
 
  .pokemon::after {
    content: '';
