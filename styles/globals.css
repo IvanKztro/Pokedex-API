@@ -22,17 +22,7 @@
  .fairy{ background: #D685AD}
 
 /*Spinner Pokeball*/
-/* html,
-body {
-  height: 100%;
-}
 
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
  .pokemon {
    position: relative;
@@ -79,60 +69,3 @@ body {
    }
  }
 
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-} */
-
-/* .navbar{
-  display:flex;
-  gap: .5rem;
-  background-color: rgb(117, 117, 117);
-  color:aliceblue;
-  font-size: .8rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-  padding: .5rem 1rem;
-
-}
-
-.sidebar {
-  grid-area: sidebar;
-  background: #465d6d;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: normal;
-  height: auto;
-  width: 100%;
-}
-
-.navbarselected{
-  color: aqua;
-}
-
-.main {
-  grid-area: main;
-  width: 100%;
-  height: auto;
-}
-
-.content {
-  background-color: #ffffff;
-
-  height: 100vh;
-  overflow: auto;
-  font-family: 'Source Sans Pro', sans-serif;
-  display: grid;
-  grid-template: [header-top] 'sidebar header header' [header-bottom] [main-top] 'sidebar main  main' 1fr [main-bottom] / auto 1fr auto;
-} */
