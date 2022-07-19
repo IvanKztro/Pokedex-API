@@ -69,7 +69,7 @@ const PokemonPage = () => {
                     <div className="flex flex-wrap gap-3">
                       {poke.moves.slice(0, 4).map((a, index) => (
                         <button
-                          key={`abi-${index}`}
+                          key={`moves-${index}`}
                           className={`${poke.types[0].type.name}  p-1 rounded-md text-[14px]`}
                         >
                           {a.move.name}
@@ -80,7 +80,7 @@ const PokemonPage = () => {
 
                   <ul className="flex gap-3 flex-wrap flex-col mt-3">
                     {poke.stats.map((s, index) => (
-                      <div className="">
+                      <div className="" key={`stat-${index}`}>
                         <span
                           className={`${poke.types[0].type.name}-text text-lg font-bold`}
                         >
