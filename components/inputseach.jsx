@@ -39,7 +39,7 @@ export default function InputSearch({ allpokemons }) {
                   //     className="hover:cursor-pointer bg-red-200 hover:bg-green-200 "
                   //     key={index}
                   //   >
-                  <Link href={`/pokemon/${p.name}`}>
+                  <Link href={`/pokemon/${p.name}`} key={`pokefil-${index}`}>
                     <a className="hover:cursor-pointer hover:bg-green-400 hover:text-white hover:-m-2 hover:py-2 rounded-lg  grid grid-cols-6 items-center">
                       <picture>
                         <source srcSet={p.imagen} type="image/webp" />

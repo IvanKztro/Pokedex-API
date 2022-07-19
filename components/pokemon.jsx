@@ -8,7 +8,7 @@ export default function Pokemon({ poke }) {
     setSelected(true);
   };
 
-  console.log(poke.Image);
+  // console.log(poke.Image);
   return (
     <>
       <Link href={`/pokemon/${poke.name}`}>
