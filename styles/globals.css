@@ -43,6 +43,7 @@
    top: 50px;
    transform: translatey(-50%);
  }
+ 
 
  .pokemon::after {
    content: '';
