@@ -26,11 +26,14 @@ const PokemonPage = () => {
                 <div
                   className={` rounded-full border-gray-200 border-[.5rem] -m-[5rem] z-50 ${poke.types[0].type.name}`}
                 >
-                  <img
-                    src={poke.sprites.front_shiny}
-                    alt=""
-                    className="item-center w-[10rem] relative"
-                  />
+                  <picture>
+                    <source srcSet="./right.png" type="image/webp" />
+                    <img
+                      src={poke.sprites.front_shiny}
+                      alt="Landscape picture"
+                      className="item-center w-[10rem] relative"
+                    />
+                  </picture>
                 </div>
               </div>
               <div className="  lg:w-[40%] sm:w-[60%]  ">
