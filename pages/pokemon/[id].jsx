@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Spinner from "../../components/spinner";
 
 const PokemonPage = () => {
   const router = useRouter();
@@ -95,7 +96,11 @@ const PokemonPage = () => {
             </section>
           </>
         ) : (
-          <h5>Cargando</h5>
+          <>
+            <section className="flex justify-center items-center h-[85vh]">
+              <Spinner />
+            </section>
+          </>
         )}
       </div>
     </>
