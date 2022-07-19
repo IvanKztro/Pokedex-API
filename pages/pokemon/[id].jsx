@@ -41,10 +41,10 @@ const PokemonPage = () => {
               </div>
               <div className="  lg:w-[40%] sm:w-[60%]  ">
                 <section
-                  class={`${poke.types[0].type.name}-border bg-gray-200 text-white  border-2  grid grid-cols pt-[5rem] rounded-lg shadow-lg pb-4 px-12`}
+                  className={`${poke.types[0].type.name}-border bg-gray-200 text-white  border-2  grid grid-cols pt-[5rem] rounded-lg shadow-lg pb-4 px-12`}
                 >
-                  {/* <div class="bg-yellow-200 "> */}
-                  <ul class="flex gap-2 items-center mt-3">
+                  {/* <div className="bg-yellow-200 "> */}
+                  <ul className="flex gap-2 items-center mt-3">
                     <span
                       className={`${poke.types[0].type.name}-text text-lg font-bold`}
                     >
@@ -60,7 +60,7 @@ const PokemonPage = () => {
                     ))}
                   </ul>
 
-                  <ul class="flex gap-2 items-center mt-3">
+                  <ul className="flex gap-2 items-center mt-3">
                     <span
                       className={`${poke.types[0].type.name}-text text-lg font-bold`}
                     >
@@ -78,9 +78,9 @@ const PokemonPage = () => {
                     </div>
                   </ul>
 
-                  <ul class="flex gap-3 flex-wrap flex-col mt-3">
+                  <ul className="flex gap-3 flex-wrap flex-col mt-3">
                     {poke.stats.map((s, index) => (
-                      <div class="">
+                      <div className="">
                         <span
                           className={`${poke.types[0].type.name}-text text-lg font-bold`}
                         >
@@ -96,7 +96,7 @@ const PokemonPage = () => {
                     ))}
                   </ul>
                   {/* </div> */}
-                  {/* <div class="bg-purple-400 col-span-6 "></div> */}
+                  {/* <div className="bg-purple-400 col-span-6 "></div> */}
                 </section>
               </div>
             </section>
