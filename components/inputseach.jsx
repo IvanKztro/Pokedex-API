@@ -7,7 +7,7 @@ export default function InputSearch({ allpokemons }) {
   //   const [search, InputPokemon] = usePokemon();
   const searchingPokemon = () => {
     const pokef = allpokemons.filter((poke) =>
-      poke.name.toLowerCase().includes(search)
+      poke.name.toLowerCase().includes(search.toLowerCase())
     );
     // console.log(pokef);
     // console.log(pokef.slice(0, 5));
@@ -31,8 +31,8 @@ export default function InputSearch({ allpokemons }) {
               }}
             />
           </section>
-          {/* <section className="bg-gray-300 z-10 absolute position-data rounded-lg input-results"> */}
-          <section className="bg-gray-300 rounded-lg">
+          <section className="bg-gray-300 z-10 absolute position-data rounded-lg input-results">
+            {/* <section className="bg-gray-300 rounded-lg"> */}
             {pokefilter.length > 0 && search ? (
               <>
                 {pokefilter.map((p, index) => (
