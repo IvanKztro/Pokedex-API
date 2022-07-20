@@ -31,7 +31,8 @@ export default function InputSearch({ allpokemons }) {
               }}
             />
           </section>
-          <section className="bg-gray-300 z-10 absolute position-data rounded-lg input-results">
+          {/* <section className="bg-gray-300 z-10 absolute position-data rounded-lg input-results"> */}
+          <section className="bg-gray-300 rounded-lg">
             {pokefilter.length > 0 && search ? (
               <>
                 {pokefilter.map((p, index) => (
