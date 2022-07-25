@@ -1,6 +1,10 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Spinner from "../../components/spinner";
+import IconPoke from "../../components/poke-details/icon";
+import Abilities from "../../components/poke-details/abilities";
+import Moves from "../../components/poke-details/moves";
+import Stats from "../../components/poke-details/stats";
 
 const PokemonPage = () => {
   const router = useRouter();
@@ -18,85 +22,20 @@ const PokemonPage = () => {
 
   return (
     <>
-      <div className="mt-[8%] mb-[2rem]">
+      <div className="mt-[8%] mb-[2rem] details-poke">
         {poke ? (
           <>
             <section className="flex flex-col justify-center  items-center ">
-              <div className="w-[50%] flex justify-center  ">
-                <div
-                  className={` rounded-full border-gray-200 border-[.5rem] -m-[5rem] z-50 ${poke.types[0].type.name}`}
-                >
-                  <picture>
-                    <source
-                      srcSet={poke.sprites.front_shiny}
-                      type="image/webp"
-                    />
-                    <img
-                      src={poke.sprites.front_shiny}
-                      alt="Landscape picture"
-                      className="item-center w-[10rem] relative"
-                    />
-                  </picture>
-                </div>
-              </div>
-              <div className="  lg:w-[40%] sm:w-[60%]  ">
+              <IconPoke poke={poke} />
+              <div className="  lg:w-[35%] sm:w-[60%]  ">
                 <section
-                  className={`${poke.types[0].type.name}-border bg-gray-200 text-white  border-2  grid grid-cols pt-[5rem] rounded-lg shadow-lg pb-4 px-12`}
+                  className={`${poke.types[0].type.name}-border bg-gray-200 text-white  border-2  grid grid-cols pt-[5rem] rounded-lg shadow-lg pb-4 px-5`}
                 >
-                  {/* <div className="bg-yellow-200 "> */}
-                  <ul className="flex gap-2 items-center mt-3">
-                    <span
-                      className={`${poke.types[0].type.name}-text text-lg font-bold`}
-                    >
-                      Abilities:
-                    </span>
-                    {poke.abilities.map((a, index) => (
-                      <button
-                        key={`abi-${index}`}
-                        className={` ${poke.types[0].type.name} bg-gray-300 p-1 rounded-md text-[14px]`}
-                      >
-                        {a.ability.name}
-                      </button>
-                    ))}
-                  </ul>
+                  <Abilities poke={poke} />
 
-                  <ul className="flex gap-2 items-center mt-3">
-                    <span
-                      className={`${poke.types[0].type.name}-text text-lg font-bold`}
-                    >
-                      Moves:
-                    </span>
-                    <div className="flex flex-wrap gap-3">
-                      {poke.moves.slice(0, 4).map((a, index) => (
-                        <button
-                          key={`moves-${index}`}
-                          className={`${poke.types[0].type.name}  p-1 rounded-md text-[14px]`}
-                        >
-                          {a.move.name}
-                        </button>
-                      ))}
-                    </div>
-                  </ul>
+                  <Moves poke={poke} />
 
-                  <ul className="flex gap-3 flex-wrap flex-col mt-3">
-                    {poke.stats.map((s, index) => (
-                      <div className="" key={`stat-${index}`}>
-                        <span
-                          className={`${poke.types[0].type.name}-text text-lg font-bold`}
-                        >
-                          {s.stat.name}:
-                        </span>
-                        <button
-                          key={`abi-${index}`}
-                          className={`${poke.types[0].type.name} p-1 rounded-md text-[1rem] ml-2`}
-                        >
-                          {s.base_stat}
-                        </button>
-                      </div>
-                    ))}
-                  </ul>
-                  {/* </div> */}
-                  {/* <div className="bg-purple-400 col-span-6 "></div> */}
+                  <Stats poke={poke} />
                 </section>
               </div>
             </section>
